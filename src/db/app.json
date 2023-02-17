@@ -8,7 +8,8 @@
       {"param": "roasting", "rating": "5/10"},
       {"param": "intensity", "rating": "6/10"}
      ],
-     "image": "<img src=\"images/coffee-1.png\">"
+     "image": "./images/coffee-1.png",
+     "popular": true
      
   },
   {
@@ -19,7 +20,8 @@
       {"param" : "roasting", "rating": "8/10"},
       {"param": "intensity", "rating": "9/10"}
      ],
-     "image": "<img src=\"images/coffee-2.png\">"
+     "image": "./images/coffee-2.png",
+     "popular": false
   },
   {
     "id":"03",
@@ -29,6 +31,7 @@
       {"param" : "roasting", "rating": "3/10"},
       {"param": "intensity", "rating": "7/10"}
      ],
-     "image": "<img src=\"images/coffee-3.png\">"
+     "image": "./images/coffee-3.png",
+     "popular": false
   }
 ]} 
