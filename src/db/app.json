@@ -1,8 +1,8 @@
 {
   "products":[
   {
-     "id":"01",
-     "name":"La lagartija",
+     "id": 1,
+     "name":"01.La lagartija",
      "description":"Mysterious and treacherous... The best choice for the start of your journey! It will provide you a rich delicious flavour.",
      "params":[
       {"param": "roasting", "rating": "5/10"},
@@ -13,8 +13,8 @@
      
   },
   {
-    "id":"02",
-     "name":"El tigre",
+    "id": 2,
+     "name":"02.El tigre",
      "description":"Really dark coffe, only for real gourmats. It has bitter flavor of grapefruits and is mixed with a little bit of peanuts with caramel.",
      "params":[
       {"param" : "roasting", "rating": "8/10"},
@@ -24,8 +24,8 @@
      "popular": false
   },
   {
-    "id":"03",
-     "name":"La cucaracha",
+    "id":3,
+     "name":"03.La cucaracha",
      "description":"Sweet and intense with a big amount of different flavors. Caramel, grapes, strawberry, you name it! It's great choice for warm summer days.",
      "params":[
       {"param" : "roasting", "rating": "3/10"},

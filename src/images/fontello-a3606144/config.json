@@ -9,7 +9,13 @@
     {
       "uid": "c53068fe21c8410b0a098b4c52c3d37e",
       "css": "down-circled2",
-      "code": 59393,
+      "code": 59394,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "4a74a0f87d4089efe7aba1825bff4193",
+      "css": "copyright",
+      "code": 61945,
       "src": "fontawesome"
     }
   ]

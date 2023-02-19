@@ -1,4 +1,4 @@
-import { template } from './settings.js';
+import { template, select } from './settings.js';
 import utils from './utils.js';
 
 class Product {
@@ -12,10 +12,11 @@ class Product {
     const thisProduct = this;
 
     const generatedHtml = template.products(thisProduct.data);
-    console.log('yooo', thisProduct.data);
-    console.log(generatedHtml);
+    
     const productElement = utils.createDOMFromHTML(generatedHtml);
-    const productContainer = document.querySelector('#products-wrapper');
+
+    const productContainer = document.querySelector(select.containerOf.products);
+
     productContainer.appendChild(productElement);
 
   }
