@@ -1,5 +1,6 @@
 // import { select } from './settings.js';
 import Product from './product.js';
+import Home from './home.js';
 
 
 const app = {
@@ -68,19 +69,31 @@ const app = {
       .then(function(parsedResponse){
         thisApp.data.products = parsedResponse;
         
-        for(let productData in thisApp.data.products){
-          
-          new Product(thisApp.data.products[productData]);
-        }
+        thisApp.initProductPage();
+        thisApp.initHomePage();
+        
       }); 
+  },
+  initHomePage: function(){
+    const thisApp = this;
+    for(let productData in thisApp.data.products){
+          
+      new Home(thisApp.data.products[productData]);
+    }
+  },
+
+  initProductPage: function(){
+    const thisApp = this;
+    for(let productData in thisApp.data.products){
+          
+      new Product(thisApp.data.products[productData]);
+    }
   },
 
   init: function(){
     const thisApp = this;
     thisApp.initData();
     thisApp.initPages();
-
-
   }
 };
 

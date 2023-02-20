@@ -18,7 +18,6 @@ class Product {
     const productContainer = document.querySelector(select.containerOf.products);
 
     productContainer.appendChild(productElement);
-
   }
 }
 
