@@ -2,6 +2,7 @@
 //
 // Kickstart any navigation component with a set of style resets. Works with
 // `<nav>`s, `<ul>`s or `<ol>`s.
+@import "./vendor/rfs";
 
 .nav {
   display: flex;
@@ -14,7 +15,7 @@
 .nav-link {
   display: block;
   padding: $nav-link-padding-y $nav-link-padding-x;
-  // @include font-size($nav-link-font-size);
+  @include font-size($nav-link-font-size);
   font-weight: $nav-link-font-weight;
   color: $nav-link-color;
   text-decoration: if($link-decoration == none, null, none);

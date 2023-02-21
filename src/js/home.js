@@ -23,6 +23,7 @@ class Home {
     homeContainer.appendChild(productElement);
 
   }
+
 }
 
 export default Home;

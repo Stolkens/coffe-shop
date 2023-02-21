@@ -14,9 +14,9 @@
 <body>
   <header class="splash background-wrapper">
     <div class="container">
-      <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+      <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-black">
         <div class="container-fluid ">
-          <a class="navbar-brand" href="#home">EL TIGRE<br><span>VENEZUELA COFFE BEANS</span></a>
+          <span class="navbar-brand mb-0 h1">EL TIGRE<br><span>VENEZUELA COFFE BEANS</span></span>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -75,8 +75,19 @@
   </section>
 
   <section id="contact">
+    <div class="title-wrapper">
+      <h3 class="title">CONTACT US</h3>
+    </div>
     <div class="contact-wrapper">
-      
+      <form class="form">
+        <label for="name">NAME</label><br>
+        <input type="text" id="name" name="name"><br>
+        <label for="surnname">SURNAME</label><br>
+        <input type="text" id="surnname" name="surnname"><br>
+        <label for="message">MESSAGE</label><br>
+        <textarea id="message" name="message"></textarea><br>
+        <input type="submit" value="SUBMIT">
+      </form>
     </div>
   </section>
  </div>

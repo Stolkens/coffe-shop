@@ -48,12 +48,28 @@ const app = {
     for(let link of thisApp.navLinks){
       if (link.getAttribute('href')=='#'+ pageId){
         link.classList.add('active');
+        link.setAttribute('aria-current', 'page');
       }
       else{
         link.classList.remove('active');
+        link.removeAttribute('aria-current');
       }
     }
     
+
+  },
+  initNavbar: function(){
+    const thisApp = this;
+    thisApp.navButton = document.querySelector('.navbar-toggler');
+    console.log(thisApp.navButton);
+    thisApp.navButton.addEventListener('click', function(event){
+      event.preventDefault();
+      console.log('kliknawszy');
+      thisApp.navbar = document.querySelector('.navbar-collapse');
+
+      thisApp.navbar.classList.toggle('active');
+    });
+
 
   },
 
@@ -94,6 +110,7 @@ const app = {
     const thisApp = this;
     thisApp.initData();
     thisApp.initPages();
+    this.initNavbar();
   }
 };
 
