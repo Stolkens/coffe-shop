@@ -1,14 +1,15 @@
 // import { select } from './settings.js';
 import Product from './product.js';
 import Home from './home.js';
+import { select, settings } from './settings.js';
 
 
 const app = {
   initPages: function() {     /* uruchamiana w momencie odswiezenia strony*/
     const thisApp = this;
-    thisApp.pages = document.querySelector('#pages').children; /* kontenery podstron */
+    thisApp.pages = document.querySelector(select.containerOf.pages).children; /* kontenery podstron */
     
-    thisApp.navLinks = document.querySelectorAll('.navbar a'); /* wszystkie linki prowadzace do  podstron*/
+    thisApp.navLinks = document.querySelectorAll(select.nav.links); /* wszystkie linki prowadzace do  podstron*/
 
     const idFromHash = window.location.hash.replace('#/', '');      /* z url strony wydobywamy id podstrony ktora ma byc otwarta jako domyslna */
  
@@ -38,21 +39,21 @@ const app = {
     const thisApp = this;
     for(let page of thisApp.pages){
       if (page.id == pageId){
-        page.classList.add('active');
+        page.classList.add(select.classNames.avtive);
       }
       else{
-        page.classList.remove('active');
+        page.classList.remove(select.classNames.avtive);
       }
     }
 
     for(let link of thisApp.navLinks){
-      if (link.getAttribute('href')=='#'+ pageId){
-        link.classList.add('active');
-        link.setAttribute('aria-current', 'page');
+      if (link.getAttribute(select.attribute.href)=='#'+ pageId){
+        link.classList.add(select.classNames.avtive);
+        link.setAttribute(select.attribute.currentPage, 'page');
       }
       else{
-        link.classList.remove('active');
-        link.removeAttribute('aria-current');
+        link.classList.remove(select.classNames.avtive);
+        link.removeAttribute(select.attribute.currentPage);
       }
     }
     
@@ -60,14 +61,13 @@ const app = {
   },
   initNavbar: function(){
     const thisApp = this;
-    thisApp.navButton = document.querySelector('.navbar-toggler');
-    console.log(thisApp.navButton);
+    thisApp.navButton = document.querySelector(select.nav.buttonToggler);
     thisApp.navButton.addEventListener('click', function(event){
       event.preventDefault();
-      console.log('kliknawszy');
-      thisApp.navbar = document.querySelector('.navbar-collapse');
+      
+      thisApp.navbar = document.querySelector(select.nav.collapse);
 
-      thisApp.navbar.classList.toggle('active');
+      thisApp.navbar.classList.toggle(select.classNames.avtive);
     });
 
 
@@ -76,7 +76,7 @@ const app = {
   initData: function(){
     const thisApp = this;
     thisApp.data ={};
-    const url = 'http://localhost:3131/products';
+    const url = settings.db.url + '/'+ settings.db.products;
 
     fetch(url)
       .then(function(rawResponse){
@@ -92,13 +92,17 @@ const app = {
   },
   initHomePage: function(){
     const thisApp = this;
+
     for(let productData in thisApp.data.products){
           
       new Home(thisApp.data.products[productData]);
     }
+    thisApp.initTitle();
+    
   },
 
   initProductPage: function(){
+
     const thisApp = this;
     for(let productData in thisApp.data.products){
           
@@ -106,11 +110,24 @@ const app = {
     }
   },
 
+  initTitle: function(){
+
+    const mainTitles = [
+      '<span>Home of</span><br><span>Original tastes</span>', 
+      '<span>Real<br>Venezuela,</span><br><span>Real Coffee</span>', 
+      '<span>Taste</span><br><span>Real Venezuela</span>'
+    ];
+    const titleContainer = document.querySelector(select.containerOf.mainTitle);
+    const randomIndex = Math.floor(Math.random() * mainTitles.length);
+    titleContainer.innerHTML = mainTitles[randomIndex];
+
+  },
+
   init: function(){
     const thisApp = this;
     thisApp.initData();
     thisApp.initPages();
-    this.initNavbar();
+    thisApp.initNavbar();
   }
 };
 

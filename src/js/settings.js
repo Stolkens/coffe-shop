@@ -2,12 +2,30 @@ export const select = {
   templateOf: {
     products : '#template-products',
   },
-  
   containerOf: {
     products: '#products-wrapper',
-    home: '#home-wrapper'
+    home: '#home-wrapper', 
+    mainTitle:'.main-title',
+    pages: '#pages'
+  }, 
+  nav:{
+    buttonToggler:'.navbar-toggler',
+    collapse: '.navbar-collapse',
+    links: '.navbar a'
+  },
+  classNames:{
+    avtive: 'active'
+  },
+  attribute: {
+    href:'href',
+    currentPage:'aria-current'
+  }   
+};
+export const settings = {
+  db:{
+    url: 'http://localhost:3131',
+    products: 'products'
   }
-      
 };
 
 export const template = {

@@ -1,0 +1,33 @@
+.contact-wrapper {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 30px;
+  font-weight: $font-semibold;
+
+  .form {
+    margin-top: 20px;
+  }
+
+  input,
+  textarea {
+    width: 530px;
+    height: 76px;
+    margin: 36px;
+  }
+
+  textarea {
+    height: 154px;
+    margin-bottom: 80px;
+
+  }
+
+  button {
+    height: 83px;
+    width: 246px;
+    color: $color-light;
+    background-color: $color-main;
+    border-color: $color-main;
+    margin-bottom: 80px;
+  }
+}

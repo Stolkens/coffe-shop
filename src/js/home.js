@@ -7,6 +7,7 @@ class Home {
     
     thisHome.data = data;
     thisHome.render();
+   
   }
   render(){
     const thisHome = this;
@@ -15,15 +16,11 @@ class Home {
     
     const productElement = utils.createDOMFromHTML(generatedHtml);
 
-    // const productContainer = document.querySelector(select.containerOf.products);
-
     const homeContainer = document.querySelector(select.containerOf.home);
 
-    // productContainer.appendChild(productElement);
     homeContainer.appendChild(productElement);
 
   }
-
 }
 
 export default Home;
