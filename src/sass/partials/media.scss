@@ -104,7 +104,6 @@
 }
 
 @media (max-height: 800px) {
-
   .title {
     padding-top: 0px;
   }
@@ -131,6 +130,7 @@
   .title::after {
     width: 200px;
   }
+
   .discover {
     p {
       font-size: 20px;

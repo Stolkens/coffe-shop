@@ -3,14 +3,15 @@
 @import "./bootstrap/functions";
 @import "./bootstrap/variables";
 @import "./bootstrap/mixins";
+@import "./bootstrap/root";
+
 @import "./bootstrap/utilities";
 @import "./bootstrap/grid";
 @import "./bootstrap/nav";
 @import "./bootstrap/navbar";
-@import "./bootstrap/root";
+
 @import "./bootstrap/images";
-@import "./bootstrap/buttons";
-@import "./bootstrap/forms";
+@import "./bootstrap/containers";
 @import "./bootstrap/helpers";
 @import "./bootstrap/bootstrap-utilities.scss";
 @import "./bootstrap/dropdown";
