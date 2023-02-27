@@ -22,9 +22,10 @@
 @import './partials/global';
 @import './partials/layout';
 @import './partials/typography';
-@import './partials/media.scss';
+
 
 @import './pages/homepage';
 @import './pages/contact';
 @import './pages/products';
-@import './partials/icons.scss'
+@import './partials/icons.scss';
+@import './partials/media.scss'

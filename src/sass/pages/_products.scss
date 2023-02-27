@@ -35,8 +35,44 @@
 }
 
 .product-image {
+  position: relative;
+
   img {
     filter: drop-shadow(0 0 24.5px rgba(0, 0, 0, 0.28));
+    object-fit: cover;
+  }
+
+  .overlay{
+    position: absolute;
+    top: 0%;
+    left: 325px;
+    width: 0;
+    height: 0;
+    border-bottom: 180px solid transparent;
+    border-right: 240px solid $color-main;
+    mask-image: linear-gradient(to top right, transparent 50%, $color-main 50%);
+  }
+
+  .price {
+    position: absolute;
+    top: 30px;
+    left: 120px;
+    
+    p {
+      margin: 0;
+      font-weight: $font-bold;
+      color: $color-light;
+    }
+
+    .old-price{
+      font-size: 16px;
+      text-decoration: line-through;
+    }
+
+    .new-price{
+      font-size: 40px;
+      margin-left: 30px;
+    }
   }
 }
 

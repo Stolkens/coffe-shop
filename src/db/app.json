@@ -9,7 +9,9 @@
       {"param": "intensity", "rating": "6/10"}
      ],
      "image": "./images/coffee-1.png",
-     "popular": "./images/popular.png"
+     "popular": "./images/popular.png", 
+     "old_price": "36$", 
+     "new_price": "25$"
   },
   {
     "id": 2,
@@ -19,7 +21,9 @@
       {"param" : "roasting", "rating": "8/10"},
       {"param": "intensity", "rating": "9/10"}
      ],
-     "image": "./images/coffee-2.png"
+     "image": "./images/coffee-2.png",
+     "old_price": "38$", 
+     "new_price": "27$"
   },
   {
     "id":3,
@@ -29,6 +33,8 @@
       {"param" : "roasting", "rating": "3/10"},
       {"param": "intensity", "rating": "7/10"}
      ],
-     "image": "./images/coffee-3.png"
+     "image": "./images/coffee-3.png",
+     "old_price": "32$", 
+     "new_price": "21$"
   }
 ]} 
