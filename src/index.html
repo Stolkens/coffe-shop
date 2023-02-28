@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="images/fontello-a3606144/css/fontello.css">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;0,900;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="vendor/flickity.min.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Coffe shop</title>
 </head>
@@ -57,11 +58,47 @@
           <div class="title-wrapper">
             <h3 class="title">ABOUT US</h3>
           </div>
-          <div class="inner">
-            <p>Who are we? Just a bunch of friends with a love for a good coffee and desire to create something new, something original.</p>
-            <p>Our coffees reflect us - young, wild and free. We are on the journey of new tastes...</p>
-            <p>Join us!</p>
-          </div>
+            <div class="main-carousel">
+              <div class="carousel-cell">
+                <div class="worker-image">
+                  <img src="images/3.png" alt="worker">
+                </div>
+                <div class="worker-info">
+                  <h6 class="worker-name">
+                    Elizabeth <span>Doherty</span>
+                  </h6>
+                  <p class="worker-description">
+                    Experiennced barista from Bahamas. She says that Venezuela has opened her eyes on coffee. "It's not about the taste", she says. "It's all about the feelings".
+                  </p>
+                </div>
+              </div>
+              <div class="carousel-cell">
+                <div class="worker-image">
+                  <img src="images/2.png" alt="worker">
+                </div>
+                <div class="worker-info">
+                  <h6 class="worker-name">
+                    Max <span>Selfish</span>
+                  </h6>
+                  <p class="worker-description">
+                    Max is the austrian barista with years of experience from the hotels across the hole Europe. "Venezuela coffee was a lightening experience for me! I have never drink such an amazing coffee!", he says.
+                  </p>
+                </div>
+              </div>
+              <div class="carousel-cell">
+                <div class="worker-image">
+                  <img src="images/1.png" alt="worker">
+                </div>
+                <div class="worker-info">
+                  <h6 class="worker-name">
+                    Ping <span>Nihao</span>
+                  </h6>
+                  <p class="worker-description">
+                    Ping is the youngest of the team. He doesn't like calling coffee a mysterious act. He says, a good coffee is like mathematical formula. Once you figured it out, every coffee you make is a masterpiece.
+                  </p>
+                </div>
+              </div>
+            </div>
         </div>
     </section>
   </section>
@@ -125,6 +162,7 @@
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
+<script src="vendor/flickity.pkgd.min.js"></script>
 <script src="js/app.js" type="module"></script>
 </body>
 </html>

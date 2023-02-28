@@ -6,7 +6,8 @@ export const select = {
     products: '#products-wrapper',
     home: '#home-wrapper', 
     mainTitle:'.main-title',
-    pages: '#pages'
+    pages: '#pages',
+    carousel: '.main-carousel'
   }, 
   nav:{
     buttonToggler:'.navbar-toggler',

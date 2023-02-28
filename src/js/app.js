@@ -1,4 +1,3 @@
-// import { select } from './settings.js';
 import Product from './product.js';
 import Home from './home.js';
 import { select, settings } from './settings.js';

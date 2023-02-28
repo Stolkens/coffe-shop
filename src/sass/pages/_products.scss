@@ -21,6 +21,8 @@
 }
 
 .product {
+  margin-top: 111px;
+
   .row[data='2'] {
     flex-direction: row-reverse;
   }
@@ -42,7 +44,7 @@
     object-fit: cover;
   }
 
-  .overlay{
+  .overlay {
     position: absolute;
     top: 0%;
     left: 325px;
@@ -57,19 +59,19 @@
     position: absolute;
     top: 30px;
     left: 120px;
-    
+
     p {
       margin: 0;
       font-weight: $font-bold;
       color: $color-light;
     }
 
-    .old-price{
+    .old-price {
       font-size: 16px;
       text-decoration: line-through;
     }
 
-    .new-price{
+    .new-price {
       font-size: 40px;
       margin-left: 30px;
     }

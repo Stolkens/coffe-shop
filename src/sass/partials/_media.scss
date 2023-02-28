@@ -29,7 +29,6 @@
     }
   }
 
-
   .product-title {
     font-size: 30px;
   }
@@ -60,17 +59,16 @@
     margin-left: 0px;
   }
 
-  .product{
-    .row[data="2"]{
+  .product {
+    .row[data="2"] {
       flex-direction: column;
     }
 
     .row {
       flex-direction: column;
     }
-   
+
   }
-  
 
   .list {
     position: static;
@@ -88,27 +86,27 @@
     margin-top: 20px;
   }
 
-  .about {
-    .inner {
-      font-size: 24px;
-
-      p:nth-of-type(2n) {
-        width: auto;
-      }
-
-      p:first-of-type {
-        width: auto;
-      }
-
-    }
-  }
-
   .product-info {
     img {
       width: 100px;
     }
   }
 
+  .about {
+    .main-carousel {
+      img {
+        width: 250px;
+      }
+
+      .worker-name {
+        font-size: 36px;
+      }
+
+      .worker-description {
+        font-size: 28px;
+      }
+    }
+  }
 }
 
 @media (max-height: 800px) {
@@ -143,11 +141,27 @@
     p {
       font-size: 20px;
     }
-  
+
     i {
       font-size: 20px;
     }
-  
+  }
+
+  .about {
+    .main-carousel {
+      .carousel-cell {
+        display: block;
+      }
+
+      .worker-image {
+        display: flex;
+        justify-content: center;
+      }
+
+      .worker-info {
+        margin-left: 0;
+      }
+    }
   }
 }
 
@@ -156,19 +170,22 @@
     img {
       width: 300px;
     }
-    .overlay{
+
+    .overlay {
       left: 182px;
       border-bottom: 90px solid transparent;
       border-right: 130px solid $color-main;
     }
+
     .price {
       top: 20px;
       left: 60px;
-      .old-price{
+
+      .old-price {
         font-size: 12px;
       }
 
-      .new-price{
+      .new-price {
         font-size: 20px;
       }
     }
@@ -176,6 +193,7 @@
 
   .product-description {
     width: auto;
+    padding-right: 60px;
   }
 
   .product-info {
@@ -203,27 +221,25 @@
     img {
       width: 150px;
     }
-    .overlay{
+
+    .overlay {
       left: 92px;
       border-bottom: 40px solid transparent;
       border-right: 70px solid $color-main;
     }
+
     .price {
       top: 5px;
       left: 30px;
-      .old-price{
+
+      .old-price {
         font-size: 8px;
       }
-      .new-price{
+
+      .new-price {
         font-size: 12px;
         margin-left: 15px;
       }
-    }
-  }
-
-  .about {
-    .inner {
-      font-size: 20px;
     }
   }
 
@@ -241,7 +257,22 @@
     img {
       left: 0px;
       width: 50px;
+    }
+  }
 
+  .about {
+    .main-carousel {
+      img {
+        width: 150px;
+      }
+
+      .worker-name {
+        font-size: 20px;
+      }
+
+      .worker-description {
+        font-size: 12px;
+      }
     }
   }
 }

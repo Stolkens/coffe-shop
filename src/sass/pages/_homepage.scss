@@ -7,23 +7,38 @@
     padding-top: 99px;
   }
 
-  .inner {
+  .main-carousel {
     color: $color-light;
-    font-size: 40px;
     letter-spacing: 1px;
-    font-weight: $font-semibold;
     font-style: $font-italic;
 
-    p:first-of-type {
-      width: 749px;
+    img {
+      width: 350px;
     }
 
-    p:nth-of-type(2n) {
-      width: 790px;
+    .carousel-cell {
+      display: flex;
+      margin-top: 100px;
+      width: auto;
     }
 
-    p:last-of-type {
-      text-align: right;
+    .worker-info {
+      margin-left: 100px;
+      margin-top: 50px;
+    }
+
+    .worker-name {
+      font-size: 46px;
+      margin: 0;
+
+      span {
+        font-weight: $font-bold;
+      }
+    }
+
+    .worker-description {
+      font-size: 36px;
+      padding-right: 40px;
     }
   }
 }

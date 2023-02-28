@@ -7,6 +7,7 @@ class Home {
     
     thisHome.data = data;
     thisHome.render();
+    thisHome.carousel();
    
   }
   render(){
@@ -20,6 +21,15 @@ class Home {
 
     homeContainer.appendChild(productElement);
 
+  }
+  carousel(){
+    // eslint-disable-next-line no-undef
+    new Flickity(select.containerOf.carousel, {
+      prevNextButtons: false,
+      autoPlay: 5000,
+      wrapAround: true,
+      pageDots: false
+    });
   }
 }
 
