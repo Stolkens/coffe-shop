@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="images/fontello-a3606144/css/fontello.css">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;0,900;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="vendor/flickity.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Coffe shop</title>
+</head>
+<body>
+  <header class="splash background-wrapper">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+        <div class="container-fluid ">
+          <span class="navbar-brand mb-0 h1">EL TIGRE<br><span>VENEZUELA COFFE BEANS</span></span>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#home">HOME</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#products">PRODUCTS</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="#contact">CONTACT</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="inner">
+        <h1 class="main-title splash-title title"><span>HOME OF</span><br><span>ORIGINAL TASTES</span></h1>
+      </div>
+      <div class="discover">
+        <p>DISCOVER</p>
+        <i class="icon-down-circled2"></i>
+      </div>
+    </div>
+  </header>
+
+ <div id="pages">
+  <section id="home">
+    <div class="title-wrapper">
+      <h3 class="title">PRODUCTS</h3>
+    </div>
+    <div id="home-wrapper" class="home-wrapper">
+    </div>
+    <section class="about background-wrapper">
+        <div class="container">
+          <div class="title-wrapper">
+            <h3 class="title">ABOUT US</h3>
+          </div>
+            <div class="main-carousel">
+              <div class="carousel-cell">
+                <div class="worker-image">
+                  <img src="images/3.png" alt="worker">
+                </div>
+                <div class="worker-info">
+                  <h6 class="worker-name">
+                    Elizabeth <span>Doherty</span>
+                  </h6>
+                  <p class="worker-description">
+                    Experiennced barista from Bahamas. She says that Venezuela has opened her eyes on coffee. "It's not about the taste", she says. "It's all about the feelings".
+                  </p>
+                </div>
+              </div>
+              <div class="carousel-cell">
+                <div class="worker-image">
+                  <img src="images/2.png" alt="worker">
+                </div>
+                <div class="worker-info">
+                  <h6 class="worker-name">
+                    Max <span>Selfish</span>
+                  </h6>
+                  <p class="worker-description">
+                    Max is the austrian barista with years of experience from the hotels across the hole Europe. "Venezuela coffee was a lightening experience for me! I have never drink such an amazing coffee!", he says.
+                  </p>
+                </div>
+              </div>
+              <div class="carousel-cell">
+                <div class="worker-image">
+                  <img src="images/1.png" alt="worker">
+                </div>
+                <div class="worker-info">
+                  <h6 class="worker-name">
+                    Ping <span>Nihao</span>
+                  </h6>
+                  <p class="worker-description">
+                    Ping is the youngest of the team. He doesn't like calling coffee a mysterious act. He says, a good coffee is like mathematical formula. Once you figured it out, every coffee you make is a masterpiece.
+                  </p>
+                </div>
+              </div>
+            </div>
+        </div>
+    </section>
+  </section>
+  <section id="products">
+    <div class="title-wrapper">
+      <h3 class="title">PRODUCTS</h3>
+    </div>
+    <div id="products-wrapper" class="products-wrapper">
+    </div>
+  </section>
+  <section id="contact">
+    <div class="title-wrapper">
+      <h3 class="title">CONTACT US</h3>
+    </div>
+    <div class="contact-wrapper">
+      <form class="form">
+        <label for="name">NAME</label><br>
+        <input type="text" id="name" name="name"><br>
+        <label for="surnname">SURNAME</label><br>
+        <input type="text" id="surnname" name="surnname"><br>
+        <label for="message">MESSAGE</label><br>
+        <textarea id="message" name="message"></textarea><br>
+        <button class="btn" type="submit">SUBMIT</button>
+      </form>
+    </div>
+  </section>
+ </div>
+
+  <footer class="footer container">
+    <div class="footer-inner">
+      <i class="icon-copyright">2021 EL TIGRE inc.</i>
+    </div>
+  </footer>
+
+  <script id="template-products" type="text/x-handlebars-template">
+    <div class="product container" >
+      <div class="row" data={{id}}>
+        <div class="col product-info">
+          <h4 class="product-title">{{name}}</h4>
+          <p class="product-description">{{description}}</p>
+          <ul class="list">{{#each params as |param|}}
+            {{#>childEntry}}
+            <li class="params">{{param.param}}: <span>{{param.rating}}</span> </li>
+            {{/childEntry}}
+              {{/each}}
+          </ul>
+          <img class="popular" src="{{popular}}" alt="logo">
+        </div>
+        <div class="col product-image">
+          <img src="{{image}}" alt="coffee">
+          <div class="overlay">
+            <div class="price">
+              <p class="old-price">{{old_price}}</p>
+              <p class="new-price">{{new_price}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
+<script src="vendor/flickity.pkgd.min.js"></script>
+<script src="js/app.js" type="module"></script>
+</body>
+</html>
